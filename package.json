@@ -1,0 +1,41 @@
+{
+  "name": "control-process",
+  "version": "1.0.0",
+  "description": "Satellite Control Application ",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 -prune=true --out=release-builds",
+    "package-win": "electron-packager . ControlStation --overwrite --platform=win32 --arch=ia32 --icon=rsc/icon.ico --prune=true --out=release-builds --version-string.ProductName=\"Orbiter\"",
+    "package-linux": "electron-packager . ControlStation --overwrite --asar=true --platform=linux --arch=x64 --prune=true --out=release-builds"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/eserrose/Orbyte-LeanSpaceHackathon.git"
+  },
+  "keywords": [
+    "space",
+    "ground",
+    "station",
+    "control",
+    "process",
+    "satellite",
+    "telemetry",
+    "telecommand"
+  ],
+  "author": "Orbyte Space",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/eserrose/Orbyte-LeanSpaceHackathon/issues"
+  },
+  "homepage": "https://gitlab.com/eserrose/Orbyte-LeanSpaceHackathon#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "cesium": "^1.87.1",
+    "dayjs": "^1.10.7",
+    "electron": "^15.3.0",
+    "electron-packager": "^15.4.0",
+    "satellite.js": "^4.1.3"
+  }
+}

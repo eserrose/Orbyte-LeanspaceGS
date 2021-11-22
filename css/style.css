@@ -1,0 +1,239 @@
+:root {
+    --orbyte-color:#4425ff;
+}
+
+body{
+    background: #0B486B;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #F56217, #0B486B);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #F56217, #0B486B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+}
+
+#orbytelogo{
+    position: absolute;
+    width: 150px;
+    right: 20px;
+}
+
+#leanlogo{
+    position: absolute;
+    width: 150px;
+    left: 20px;
+    top: 10px;
+}
+
+.container{
+    border: 1px black solid;
+}
+
+#commandsContainer{
+    position: absolute;
+    top: 60px;
+    left: 20px;  
+    width: 345px;
+    height: 420px;
+}
+
+#scheduleContainer{
+    position: absolute;
+    top: 60px;
+    left: 385px;  
+    width: 345px;
+    height: 420px;
+}
+
+#passContainer{
+    position: absolute;
+    top: 500px;
+    left: 20px;
+    width: 710px;
+    height: 200px;
+}
+
+#logContainer{
+    position: absolute;
+    top: 500px;
+    right: 30px;
+    width: 710px;
+    height: 200px;
+    white-space: normal;
+}
+
+#timelineContainer{
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    width: 1440px;
+    height: 180px;
+}
+
+.drop-shadow{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 1px solid grey;
+    border-radius: 5px;
+    overflow: auto;
+    white-space: nowrap;
+    background:#fff;
+    position:relative;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 0, 0, 0.1) inset;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 0, 0, 0.1) inset;
+    -mox-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 0, 0, 0.1) inset;
+}
+
+.container-header {
+    background-color: ghostwhite;
+    margin: 0;
+    padding-bottom: 2px;
+    text-align: center;
+    font-size: 1.2em;
+    border-bottom: darkgray 1px solid;
+    font-weight: 500;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1) inset;
+}
+
+.container-elements button{
+    width: 90%;
+    margin-left: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-family: system-ui;
+    color: white;
+    background-color: darkslategrey;
+    height: 28px;
+}
+
+.container-elements button:active{
+    background-color: darkblue;
+    transform: scale(0.99);
+}
+
+.container-elements button:hover{
+    box-shadow: darkorange 0 0 2px 2px;
+}
+
+.container-elements button:disabled{
+    color: gray;
+}
+
+.container-elements input{
+    width: 75%;
+    margin-left: 15px;
+    margin-top: 4px;
+    border: black solid 0.5px;
+    border-radius: 3px;
+    font-family: system-ui;
+    height: 20px;
+    text-align: right;
+}
+
+.sub-container{
+    margin-left: 10px;
+}
+
+.sub-container button{
+    float: left;
+    width: 30%;
+    height: 22px;
+    margin-top: 4px;
+    margin-left: 5px;
+}
+
+.disabled{
+    color: gray !important;
+    outline: none; 
+}
+
+
+#unitBox{
+    height: 24px;
+    padding-top: 2px;
+}
+
+.pass{
+    width: 200px;
+    overflow: hidden;
+    background-color: lime;
+    margin: 5px;
+    display: grid;
+    border-radius: 10px;
+    padding: 6px;
+    font-size: smaller;
+    border: 1px solid lightslategray;
+}
+
+.pass:hover{
+    background-color: lightsalmon;
+    cursor: pointer;
+}
+
+#passes{
+    width: 100%;
+    height: 87%;
+    float: left;
+    display: -webkit-box;
+    overflow-x: scroll;
+}
+
+.badPass{
+    background-color: red !important;
+}
+
+.nowPass{
+    background-color: rgb(240, 179, 12) !important;
+}
+
+
+.freePass{
+    background-color: lightblue !important;
+}
+
+.passInfo{
+    background-color: gainsboro;
+    padding: 6px;
+    border: solid 1px darkslateblue;
+}
+
+.eventBar{
+    background-color: greenyellow;
+    border-radius: 10px;
+    border: solid darkgray 1px;
+    margin: 8px;
+    text-align: center;
+    min-height: 40px;
+    position: relative;
+}
+
+.smaller-text{
+    font-size: x-small;
+}
+
+.cancelBtn{
+    position: absolute;
+    bottom: 8px;
+    right: 5px;
+    width: 20px;
+    background-color: orangered;
+    border-radius: 100%;
+    height: 20px;
+}
+
+.cancelBtn:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.timeStr{
+    color: maroon;
+}
+
+#seqDiv{
+    font-size: small;
+    width: 89%;
+    height: 80px;
+    margin-left: 16px;
+    margin-bottom: 9px;
+}
+
+#cmdSel{
+    max-width: 134px;
+    margin-left: 15px;
+}
