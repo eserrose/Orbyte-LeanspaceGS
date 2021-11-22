@@ -4,14 +4,15 @@ You can simply unzip and run the "ControlStation.exe" under release-builds if yo
 
 Alternatively, if you have npm installed, you can run the program with
 
-$npm install
-$npm start
+    $npm install
+
+    $npm start
 
 Within the project directory.
 
 <h3>Packaging for different platforms </h3>
 
-$npm run package-<platform>
+    $npm run package-<platform>
 
 Where platform is "win", "mac", or "linux".
 
