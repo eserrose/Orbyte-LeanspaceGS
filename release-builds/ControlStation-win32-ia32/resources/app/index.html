@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        @import url(node_modules/cesium/Build/Cesium/Widgets/widgets.css);
+        html, body,#cesiumContainer {
+            height: 100%; margin: 0; padding: 0; overflow: hidden;
+        }
+        #cesiumContainer{
+            height: 420px; width: 710px; position: absolute; right: 30px; top:60px; padding: 0; overflow: hidden;
+        }
+    </style>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script> if(typeof module === 'object'){window.module = module; module = undefined;} </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="module" src="main.js"></script>
+    <script type="module" src="./src/leanspace/ls.js"></script>
+    <script>if (window.module) module = window.module;</script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <img id="leanlogo" src="./rsc/leanspace.png"/>
+        <img id="orbytelogo" src="./rsc/orbytespace.png"/>
+    </div>
+
+    <div class="container drop-shadow" id="commandsContainer">
+        <div class="container-header">Routines</div>
+        <div class="container-elements">
+            <button id="keepDistBtn" disabled>Keep Distance</button>
+            <br>
+            <input type="number" placeholder="3000" id="dist" min="300"/>
+            <select id="unitBox"><option value="1">m</option><option value="1000">km</option></select>
+            <br>
+            <button id="modeBtn" style="margin-top: 20px;">Change Operation Mode</button>
+            <div class="sub-container" id="modeBtns">
+                <button>Nominal</button>
+                <button class="disabled">Safe</button>
+                <button class="disabled">Emergency</button>
+            </div>
+            <br><br>
+            <button id="seqCrtBtn">Create Sequence</button>
+            <br>
+            <button id="seqLoadBtn">Load Sequence</button>
+            <br>
+            <button id="seqEditBtn">Edit Sequence</button>
+            <br>
+            <div id="seqDiv"></div>
+            <button id="confirmSchedule">Confirm Schedule</button>
+        </div>
+    </div>
+    <div class="container drop-shadow" id="scheduleContainer">
+        <div class="container-header">Schedule</div>
+        <div id="scheduleBody""></div>
+    </div>
+    <div class="container drop-shadow" id="logContainer">
+        <div class="container-header">Logs</div>
+        <div id="container-text"></div>
+    </div>
+    <div class="container drop-shadow" id="passContainer">
+        <div class="container-header">Next Passes</div>
+        <div id="passes"></div>
+    </div>
+    <div class="container drop-shadow" id="timelineContainer">
+        <div class="container-header">Timeline</div>
+    </div>
+
+    <div id="cesiumContainer"></div>
+
+    <button id="resetBtn" style="position: absolute;z-index: 10; bottom:5px; right:5px;">Reset</button>
+
+</body>
+</html>
